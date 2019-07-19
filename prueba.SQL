@@ -115,7 +115,9 @@ CREATE TABLE Multa (
 ;
 
 CREATE TABLE Sede ( 
-	k_id_sede varchar(20) NOT NULL
+	k_id_sede varchar(20) NOT NULL,
+	direccion varchar(30) NOT NULL,
+	telefono numeric(7) NOT NULL
 )
 ;
 
@@ -232,7 +234,7 @@ CREATE INDEX IXFK_Consultorio_Sede
 ON Consultorio (k_id_sede)
 ;
 ALTER TABLE Consultorio
-ADD CONSTRAINT i_tipo CHECK (i_tipo IN('Medicina general','Pediatría','Ofrtalmologia','Odontología'))
+ADD CONSTRAINT i_tipo CHECK (i_tipo IN('Medicina general','PediatrÃ­a','Ofrtalmologia','OdontologÃ­a'))
 ;
 CREATE INDEX IXFK_Medico_Consultorio
 ON Medico (k_id_consultirio)
@@ -244,7 +246,7 @@ CREATE INDEX IXFK_Medico_Usuario
 ON Medico (k_identificacion)
 ;
 ALTER TABLE Medico
-ADD CONSTRAINT franja CHECK (franja IN('Mañana','Tarde'))
+ADD CONSTRAINT franja CHECK (franja IN('MaÃ±ana','Tarde'))
 ;
 ALTER TABLE Multa
 ADD CONSTRAINT i_estado CHECK (i_estado IN('multado','sin multa'))
