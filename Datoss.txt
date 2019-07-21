@@ -1,0 +1,67 @@
+			INSERT INTO categoria(
+					k_id_categoria, v_copago, v_multa)
+				VALUES (1, 1000, 7000),
+					   (2,2500, 9000);
+
+			INSERT INTO especialidad(k_codigo, n_nombre)
+				VALUES (1, 'General'),
+					 (2, 'Odontologo');	
+					   
+			INSERT INTO sede(k_id_sede)
+				VALUES (1111),
+				   (1112);
+					   
+			INSERT INTO tipo_cita(k_id_tipo, duracion)
+				VALUES (1, 30),
+					(2, 30);		       
+
+			INSERT INTO consultorio(k_id_consultirio, i_tipo, descrip_equipo, k_id_sede)
+					VALUES (101, 'Medicina general', 'Equipo basico', 1111),
+						   (201, 'Odontología', 'Equipo Odontologia', 1112);			   
+						   
+
+
+			INSERT INTO usuario(k_identificacion, i_tipo_document, contrasea, "eMail", q_tel_fijo,q_tel_cel, i_sexo, n_persona, f_nacimiento)
+							
+					VALUES (123456789, 'CC', 1234, 'j@n.com', 1234567, 
+						3145678765, 'M', 'Alejandro Rios', '30-12-1999'),
+							
+							(234567890, 'TI', 1234, 'm@n.com', 1234567, 
+						3208765498, 'M', 'Max Rios', '24-11-2012'),
+							
+							(123456790, 'CC', 4321, 'l@n.com', 9873562, 
+						3178964567, 'F', 'Lorena Flor', '12-03-1981'),
+							
+							(123456791, 'CC', 4321, 'luis@n.com', 9883362, 
+						3178942065, 'M', 'Luis Fer', '12-03-1970'),
+							
+							
+							(123456792, 'CC', 1234, 'john@n.com', 9872592, 
+						3188964589, 'M', 'John Parra', '26-12-1985'),
+							
+							(123456793, 'TI', 1234, 'cami@n.com', 9872592, 
+						3178964567, 'M', 'Camilo Parra', '22-12-2005');		 
+
+			INSERT INTO afiliado(k_identificacion, parentezco, k_identificacion_afiliado, i_estado, i_estado_multa, k_id_categoria)
+					VALUES (123456789, 'Padre', 123456789, 'Activo', 'Sin multa', 1),
+					   (234567890, 'Hijo', 123456789, 'Activo', 'Sin multa', 1),
+					   (123456791, null, 123456791, 'Inactivo', 'Sin multa', 2),
+					   (123456792, 'Padre', 123456792, 'Activo', 'Multado', 2),
+					   (123456793, 'Hijo', 123456792, 'Inactivo', 'Sin multa', 2);		
+
+			INSERT INTO medico(i_tiene_agenda, k_identificacion, franja, k_codigo_especiali, k_id_consultirio)
+					VALUES (TRUE, 123456790, 'Mañana', 1,101),
+						(TRUE,123456791, 'Tarde', 2,201);
+						   
+			INSERT INTO agenda(k_id_agenda, i_estado, fecha, h_inicio, h_fin, k_identificacion, k_id_tipo)
+				VALUES (1,'Cumplida', '19-07-2019', '11:30', '12:00', 123456790,1),
+				   (2,'Incumplida', '20-07-2019', '12:30', '13:00', 123456791,2);
+
+			INSERT INTO multa(i_estado, v_multa, k_id_multa)
+						VALUES ('Debe', 9000, 0001);			   			   	
+
+			INSERT INTO cita(f_cita, k_id_cita, i_estado, prescripcion, diagnostico, k_id_agenda, k_identificacion, k_id_multa)
+					VALUES ('19-07-2019', 1230, 'Cumplida',null,null,1, 123456789, null),
+						   ('20-07-2019', 1231, 'Incumplida',null,null,2, 123456792, 0001);	
+
+				
