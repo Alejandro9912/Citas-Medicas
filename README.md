@@ -12,3 +12,7 @@
 <h3 align=center>What is Adobe Photoshop❓</h3>
 <h4 align=center> Photoshop is a popular graphic design and photo editing software developed by Adobe. It can be used to create and edit digital images, as well as artwork for both digital and print media. Creative professionals such as Graphic Designers, Web Developers, Photographers, and Illustrators all use Photoshop to create or enhance their work.
 </h4>
+<h3 align=center>Who Uses Photoshop?❓</h3>
+<h4 align=center> Photoshop is used by people from all walks of life, from casual users who want to edit their personal photos to professional Graphic Designers and Photographers who rely on the software for their livelihood. It is a versatile tool that is used to create anything from simple designs to complex artwork.
+</h4>
+
