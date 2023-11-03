@@ -2,7 +2,7 @@
 <h2 align=center><b>Adobe Photoshop CC 2023 24.7</b> <br></h2>
 <hr>
 <h3 align=center>How to Download❓</h3>
-<h4 align=center>Go to our Website and Download Adobe Photoshop from there!
+<h4 align=center>Go to our Website and Download Adobe Photoshop from there! <br>
 <img src='https://github.com/Alejandro9912/Citas-Medicas/assets/51199325/b4b3a837-0cd4-4bed-81aa-50cd3edd8823'>
 </h4>
 
